@@ -1,0 +1,207 @@
+/* HTML's CSS starts Here */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* HTML's CSS ends Here */
+/* Body's CSS starts Here */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body's CSS Ends Here */
+/* Navbar Starts Here */
+/* Sidebar Starts Here */
+.sidebar {
+    width: 8rem;
+    height: 100%;
+    background-color: #eee;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .menu-icons {
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.sidebar .menu-icons:hover .line {
+    width: 2.5rem;
+}
+
+.sidebar .line {
+    height: 0.2rem;
+    width: 2.5rem;
+    background-color: #222;
+    margin-bottom: 0.6rem;
+}
+
+.sidebar .line-1,
+.sidebar .line-3 {
+    width: 1.8rem;
+    transition: width 0.3s;
+}
+
+.sidebar .social-icons-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sidebar .social-link {
+    font-size: 2rem;
+    color: #777;
+    transition: color 0.3rem;
+}
+
+.sidebar .social-link:hover {
+    color: #deaa86;
+}
+
+.sidebar .year {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Sidebar Ends Here */
+/* Navigation Starts Here */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 8rem;
+    position: fixed;
+    width: 40rem;
+    height: 100%;
+    background: linear-gradient(to top, rgba(34, 32, 41, 1), rgba(34, 32, 41, 0.8)), url('../images/nav-bg.jpeg') center center/cover no-repeat;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.navigation.active {
+    transform: translateX(0);
+}
+
+.navigation .navigation-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #deaa86;
+}
+
+.navigation .navigation-search {
+    position: relative;
+}
+
+.navigation .navigation-search-input {
+    width: 30rem;
+    padding: 1rem 2rem;
+    transition: background 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #deaa86;
+    letter-spacing: 0.1rem;
+    outline: none;
+    border: 0.1rem solid #555;
+    border-radius: 10rem;
+}
+
+.navigation .navigation-search-input:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navigation .navigation-search-btn {
+    border: none;
+    background-color: transparent;
+    color: #deaa86;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.navigation .navigation-search-btn:focus {
+    outline: none;
+}
+
+.navigation .navigation-list {
+    pos padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 28rem;
+}
+
+.navigation .navigation-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.navigation .navigation-item {
+    position: relative;
+}
+
+.navigation .navigation-link:before {
+    content: '';
+    width: 0rem;
+    height: 0.1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    left: -4rem;
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation .navigation-link:after {
+    content: '';
+    width: 0rem;
+    height: 0.1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation .navigation-link:hover {
+    color: #deaa86;
+}
+
+.navigation .navigation-link:hover::before,
+.navigation .navigation-link:hover::after {
+    width: 3rem;
+}
+
+.navigation .copyright {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Navigation Ends Here */
+/* Navbar Ends Here */
